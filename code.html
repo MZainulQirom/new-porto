@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      try {
+        try {
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                  "error": "#ffb4ab",
+                  "secondary-fixed-dim": "#d3beeb",
+                  "on-secondary-fixed": "#231437",
+                  "surface-variant": "#353534",
+                  "on-surface-variant": "#c2c6d6",
+                  "outline": "#8c909f",
+                  "surface-container-lowest": "#0e0e0e",
+                  "primary-container": "#4d8eff",
+                  "surface-container": "#201f1f",
+                  "on-background": "#e5e2e1",
+                  "tertiary-container": "#b76dff",
+                  "tertiary-fixed-dim": "#ddb7ff",
+                  "primary": "#adc6ff",
+                  "surface-dim": "#131313",
+                  "surface-container-highest": "#353534",
+                  "background": "#131313",
+                  "on-tertiary-container": "#400071",
+                  "inverse-primary": "#005ac2",
+                  "on-tertiary-fixed-variant": "#6900b3",
+                  "secondary": "#d3beeb",
+                  "primary-fixed": "#d8e2ff",
+                  "surface-tint": "#adc6ff",
+                  "on-secondary-container": "#c4b0dd",
+                  "surface-bright": "#3a3939",
+                  "error-container": "#93000a",
+                  "tertiary": "#ddb7ff",
+                  "primary-fixed-dim": "#adc6ff",
+                  "secondary-container": "#524267",
+                  "on-secondary": "#38294d",
+                  "tertiary-fixed": "#f0dbff",
+                  "secondary-fixed": "#eddcff",
+                  "inverse-surface": "#e5e2e1",
+                  "on-primary-fixed-variant": "#004395",
+                  "on-primary-fixed": "#001a42",
+                  "on-secondary-fixed-variant": "#4f4065",
+                  "on-primary-container": "#00285d",
+                  "outline-variant": "#424754",
+                  "surface-container-low": "#1c1b1b",
+                  "on-tertiary-fixed": "#2c0051",
+                  "surface": "#131313",
+                  "on-primary": "#002e6a",
+                  "on-tertiary": "#490080",
+                  "surface-container-high": "#2a2a2a",
+                  "on-error-container": "#ffdad6",
+                  "inverse-on-surface": "#313030",
+                  "on-surface": "#e5e2e1",
+                  "on-error": "#690005"
+                },
+                "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+                },
+                "spacing": {
+                  "gutter": "24px",
+                  "section-gap": "120px",
+                  "container-max": "1280px",
+                  "stack-md": "16px",
+                  "margin-mobile": "20px",
+                  "stack-sm": "8px",
+                  "stack-lg": "32px"
+                },
+                "fontFamily": {
+                  "display-xl-mobile": ["Geist", "Inter"],
+                  "mono-code": ["Geist", "monospace"],
+                  "label-md": ["Geist", "Inter"],
+                  "display-xl": ["Geist", "Inter"],
+                  "headline-md": ["Geist", "Inter"],
+                  "body-md": ["Inter"],
+                  "headline-lg": ["Geist", "Inter"],
+                  "body-lg": ["Inter"]
+                },
+                "fontSize": {
+                  "display-xl-mobile": ["40px", {
+                    "lineHeight": "1.2",
+                    "letterSpacing": "-0.02em",
+                    "fontWeight": "800"
+                  }],
+                  "mono-code": ["14px", {
+                    "lineHeight": "1.5",
+                    "letterSpacing": "0em",
+                    "fontWeight": "400"
+                  }],
+                  "label-md": ["14px", {
+                    "lineHeight": "1",
+                    "letterSpacing": "0.05em",
+                    "fontWeight": "600"
+                  }],
+                  "display-xl": ["72px", {
+                    "lineHeight": "1.1",
+                    "letterSpacing": "-0.04em",
+                    "fontWeight": "800"
+                  }],
+                  "headline-md": ["24px", {
+                    "lineHeight": "1.4",
+                    "letterSpacing": "-0.01em",
+                    "fontWeight": "600"
+                  }],
+                  "body-md": ["16px", {
+                    "lineHeight": "1.6",
+                    "letterSpacing": "0em",
+                    "fontWeight": "400"
+                  }],
+                  "headline-lg": ["40px", {
+                    "lineHeight": "1.2",
+                    "letterSpacing": "-0.02em",
+                    "fontWeight": "700"
+                  }],
+                  "body-lg": ["18px", {
+                    "lineHeight": "1.6",
+                    "letterSpacing": "0em",
+                    "fontWeight": "400"
+                  }]
+                }
+              },
+            },
+          }
+        } catch (_e) {}
+      } catch (_e) {}
+    </script>
+  </head>
+  <body class="bg-background text-on-background selection:bg-primary selection:text-on-primary-container">
+    <!-- New Fixed Background Layout -->
+    <div class="fixed inset-0 -z-20 w-full h-full">
+      <!-- Base Image Background -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFGNPlwz4R_M3Wacxs0N2IIQgbAPiwvLWoNWB4_0FofQFTAcXfawRr-Vnoy4fAgjHlSWQMY3rftVR74V2yz3-qOf3Uz5Imzd7Sujrv4N9kxhzD3T0Evs3TYCmbr-4PpCdfXQifM6VOJmPzWjbS6byWIxzf6GUC5LIDS9PyW_lIlHsPvKKNAqZtPHZB5h_D7tebwPKtEg4FPvrR5b0_huhztUH4BdC-eCQV8-4qBv_dMibak1M3LdVspq3UguWXyJSdqwxNwdWI7cE');"></div>
+      <!-- Subtle Dark Overlay for Readability -->
+      <div class="absolute inset-0 bg-black/60"></div>
+      <!-- Animated Shader Overlay -->
+      <!-- Gradient for smoother content separation -->
+      <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/80"></div>
+    </div>
+    <!-- Top Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-none border-b border-white/0 h-20 transition-all duration-500 ease-in-out" id="main-header">
+      <div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-full">
+        <a class="font-display-xl-mobile text-headline-md font-bold text-primary" href="#hero">My-Porto.id</a>
+        <nav class="hidden md:flex gap-8 items-center">
+          <a class="nav-link font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary active" href="#hero">Hero</a>
+          <a class="nav-link font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary" href="#about">About</a>
+          <a class="nav-link font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary" href="#skills">Skills</a>
+          <a class="nav-link font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary" href="#projects">Projects</a>
+          <a class="nav-link font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary" href="#experience">Experience</a>
+          <a class="nav-link font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary" href="#contact">Contact</a>
+        </nav>
+        <a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:scale-105 transition-transform shadow-[0_0_15px_rgba(173,198,255,0.3)]" href="./assets/new Resume M Zainul Qirom English (1).pdf">Resume</a>
+      </div>
+    </header>
+    <main class="relative z-10">
+      <!-- Hero Section -->
+      <section class="relative min-h-[100vh] flex flex-col justify-center items-center text-center px-gutter pt-20 overflow-hidden" id="hero">
+        <!-- CSS Floating Spheres -->
+        <div class="absolute top-1/4 -left-20 w-64 h-64 bg-primary/20 rounded-full hero-sphere"></div>
+        <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-tertiary/10 rounded-full hero-sphere" style="animation-delay: -5s;"></div>
+        <div class="absolute top-1/2 left-3/4 w-40 h-40 bg-secondary/15 rounded-full hero-sphere" style="animation-delay: -10s;"></div>
+        <div class="relative z-10 max-w-4xl">
+          <h1 class="font-display-xl text-display-xl mb-4 leading-tight"> M. <span class="text-primary text-glow">Zainul Qirom</span>
+          </h1>
+          <p class="font-headline-lg text-headline-lg text-secondary-fixed-dim mb-6"> Frontend Engineer </p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-lg leading-relaxed"> Building modern, scalable, and beautiful web &amp; mobile experiences with a focus on technical precision and cinematic design. </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <a class="bg-primary text-on-primary-container px-8 py-4 rounded-xl font-label-md shadow-[0_10px_20px_-5px_rgba(173,198,255,0.3)] hover:scale-105 transition-all" href="#projects"> View Projects </a>
+            <a class="glass glass-hover px-8 py-4 rounded-xl font-label-md transition-all text-on-surface" href="#contact"> Contact Me </a>
+          </div>
+          <!-- <div class="flex gap-6 justify-center mt-12"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-3xl">terminal</span></a><a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:zainmuhamad17@gmail.com"><span class="material-symbols-outlined text-3xl">alternate_email</span></a><a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/promild-pro?tab=repositories"><span class="material-symbols-outlined text-3xl">share</span></a></div></div> -->
+      </section>
+      <!-- About Section -->
+      <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="about">
+        <div class="glass p-stack-lg md:p-12 rounded-3xl flex flex-col md:flex-row gap-12 items-center">
+          <div class="w-full md:w-1/3">
+            <div class="aspect-square glass roded-2xl overflow-hidden relative group">
+              <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A professional portrait of a tech-savvy software engineer with a minimalist futuristic background. Soft cyan and deep purple rim lighting accentuates the subject, creating a professional yet innovative aesthetic. The composition is clean, centered, and reflects a high-end, premium digital design ethos characteristic of modern creative portfolios." src="./assets/profil.jpg">
+              <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/3">
+            <h2 class="font-headline-lg text-headline-lg mb-6">Biography</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8"> I am a dedicated Frontend Engineer with a passion for crafting immersive digital experiences. With deep expertise in React ecosystem and cross-platform mobile development, I bridge the gap between complex engineering requirements and intuitive, high-fidelity user interfaces. My approach is rooted in the "Architect of the Void" philosophy—finding beauty and structure in the digital expanse. </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center gap-2 glass px-4 py-2 rounded-full border-primary/20">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+                <span class="font-label-md text-primary">React</span>
+              </div>
+              <div class="flex items-center gap-2 glass px-4 py-2 rounded-full border-primary/20">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">integration_instructions</span>
+                <span class="font-label-md text-primary">Next.js</span>
+              </div>
+              <div class="flex items-center gap-2 glass px-4 py-2 rounded-full border-primary/20">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">javascript</span>
+                <span class="font-label-md text-primary">TypeScript</span>
+              </div>
+              <div class="flex items-center gap-2 glass px-4 py-2 rounded-full border-primary/20">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">css</span>
+                <span class="font-label-md text-primary">Tailwind CSS</span>
+              </div>
+              <div class="flex items-center gap-2 glass px-4 py-2 rounded-full border-primary/20">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+                <span class="font-label-md text-primary">React Native</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="skills">
+        <h2 class="font-headline-lg text-headline-lg text-center mb-16">Technical <span class="text-primary">Skills</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Frontend -->
+          <div class="glass p-8 rounded-3xl glass-hover transition-all">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary">code</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-6">Frontend</h3>
+            <div class="space-y-6">
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">React &amp; Next.js</span>
+                  <span class="text-primary">95%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-primary w-[95%]"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">TypeScript</span>
+                  <span class="text-primary">90%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-primary w-[90%]"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">Tailwind CSS</span>
+                  <span class="text-primary">98%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-primary w-[98%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="glass p-8 rounded-3xl glass-hover transition-all">
+            <div class="w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-tertiary">build</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-6">Tools</h3>
+            <div class="space-y-6">
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">Git &amp; GitHub</span>
+                  <span class="text-tertiary">92%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-tertiary w-[92%]"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">Figma</span>
+                  <span class="text-tertiary">85%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-tertiary w-[85%]"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">Vercel / AWS</span>
+                  <span class="text-tertiary">80%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-tertiary w-[80%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Others -->
+          <div class="glass p-8 rounded-3xl glass-hover transition-all">
+            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-secondary">explore</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-6">Others</h3>
+            <div class="space-y-6">
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">React Native</span>
+                  <span class="text-secondary">88%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-secondary w-[88%]"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">Node.js</span>
+                  <span class="text-secondary">75%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-secondary w-[75%]"></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-label-md">
+                  <span class="">Unit Testing</span>
+                  <span class="text-secondary">82%</span>
+                </div>
+                <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                  <div class="h-full bg-secondary w-[82%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="projects">
+        <h2 class="font-headline-lg text-headline-lg mb-16">Featured <span class="text-primary">Projects</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="tilt-card glass rounded-3xl overflow-hidden glass-hover group hover:bg-white/10" onmouseleave="resetTilt(this)" onmousemove="handleTilt(event, this)">
+            <div class="h-64 relative">
+              <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A clean, high-fidelity UI mock-up of an e-commerce paint application called TokoCat. The design features minimalist product cards showing vibrant paint buckets, a sleek shopping cart interface, and a primary blue and white color scheme. The lighting is bright and modern, suggesting a seamless and professional user experience on a dark glass-textured background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYBSqAw8QRStImxZ4jVbOXBQhLiEnaRd8y1tw7puIEyhakwIXaUAkvdt0u3fSfd9_-4N-PF_dlhroBMpDviMnX6iHH6qXFmmV_qT8jf-vHVIGRKQS-FxlUM090MMbsI4rbpx0TgFGAOOWvszAmP5BCxIUmx4f_JkrQ2xiq6INFSlMlF8yODGOK5UjnZ033pe3QyeIB3X4UXX8zYHzLV6ULNszcwnDtlnwereVOP63HajjKqQeVBNR3pvBqWUh3_2O082jVtCwKvG4">
+              <div class="absolute inset-0 bg-gradient-to-t from-background h-full w-full to-transparent opacity-60 group-hover:opacity-0  group-hover:scale-110 transition-all duration-700"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-headline-md text-headline-md mb-4">TokoCat</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-on-surface"> A specialized e-commerce platform for architectural paint and supplies, featuring a custom color mixer and real-time inventory. </p>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-primary/10 text-primary border border-primary/20">Next.js</span>
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-primary/10 text-primary border border-primary/20">MONGODB</span>
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-primary/10 text-primary border border-primary/20">Tailwind</span>
+              </div>
+              <a class="inline-flex items-center gap-2 text-primary font-label-md group/link" href="https://toko-ayw4viqr9-muhamad-zains-projects.vercel.app/"> Case Study <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="tilt-card glass rounded-3xl overflow-hidden glass-hover group hover:bg-white/10" onmouseleave="resetTilt(this)" onmousemove="handleTilt(event, this)">
+            <div class="h-64 relative">
+              <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic mobile financial application interface displayed on a high-end smartphone. The screen shows dynamic spending charts, neon-glow wallet balances, and dark-mode transaction lists. The UI is clean, using a palette of deep blacks, electric blues, and vibrant purples. The background is a soft-focus studio environment with high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPOFr-5XY6xAeK4M0GCHuD_0_RNMXiBrLhvcSTFeKN5wmv0tlIj2PT4-jo9AwwmpuJTQ3h-QcFimeL0loL-5kwsYEkGmA73TZ8CnCQN_idG0ILp7Qnb3gTryMrdVZ5PplzVM3iHlrGd8eRsWXCRmwDSr68WMpnnqSHikJT3OQJ8KMJbElh0SuxCyeOOXkmT5n6BJ5R66OOh1wnPu3CjJpuksP7z39ndulXIhpjn42WkTAa8QeOXZNVeFmBsPylFP5s0qRYv7ZYidw">
+              <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60 group-hover:opacity-0 group-hover:scale-110 transition-all duration-700"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-headline-md text-headline-md mb-4">Finance App</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-on-surface"> Native mobile application for tracking multi-currency assets and expenses with integrated visualization dashboards. </p>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-tertiary/10 text-tertiary border border-tertiary/20">React Native</span>
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-tertiary/10 text-tertiary border border-tertiary/20">Firebase</span>
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-tertiary/10 text-tertiary border border-tertiary/20">ChartJS</span>
+              </div>
+              <a class="inline-flex items-center gap-2 text-primary font-label-md group/link" href="#"> Case Study <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="tilt-card glass rounded-3xl overflow-hidden glass-hover group hover:bg-white/10" onmouseleave="resetTilt(this)" onmousemove="handleTilt(event, this)">
+            <div class="h-64 relative">
+              <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An elegant and artistic digital wedding invitation web application. The design features flowing typography, soft pastel floral accents on a minimalist white glassmorphism background, and interactive map widgets. The atmosphere is romantic yet modern, with subtle golden highlights and smooth transition animations visible in the still frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6beYn5zg9uBh-x6hgI_V9jugZuuluX62CKfVhm7H-VibaQjip8NeM5SpVTsqzo4J82mHh8SXalL_EgMwknG0RvJCXFl4If7O-_F15cwFTXJSPMH9maP0S1H3ITlqvFkm-zVHvcHIzwsBzF8K56MwiKLlGfGhfOb4fYuaaMT7uaB2jN1ioMjLdLp9NUrVMstlhqZijG7WNRNuFEwtZ-0NucY0nmHLxIITyNLW8gkv6Z_Gat7vghpVEUpq-dv3Wal5TTBAvFEOy_wA">
+              <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60 group-hover:opacity-0 group-hover:scale-110 transition-all duration-700"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-headline-md text-headline-md mb-4">Wedding Invitation</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-on-surface"> A high-interaction invitation system featuring RSVP tracking, guest list management, and live photo sharing galleries. </p>
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-secondary/10 text-secondary border border-secondary/20">Next.js</span>
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-secondary/10 text-secondary border border-secondary/20">Framer Motion</span>
+                <span class="text-[10px] font-mono-code uppercase tracking-tighter px-2 py-1 rounded bg-secondary/10 text-secondary border border-secondary/20">FIREBASE</span>
+              </div>
+              <a class="inline-flex items-center gap-2 text-primary font-label-md group/link" href="#"> Case Study <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience Section -->
+      <section class="py-section-gap px-gutter max-w-container-max mx-auto" id="experience">
+        <h2 class="font-headline-lg text-headline-lg mb-16 text-center">Career <span class="text-primary">Journey</span>
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-12">
+          <div class="relative pl-12 timeline-line">
+            <!-- Node -->
+            <div class="absolute left-[-9px] top-0 w-5 h-5 rounded-full bg-primary shadow-[0_0_15px_rgba(173,198,255,1)] z-10"></div>
+            <div class="glass p-8 rounded-3xl glass-hover">
+              <div class="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 class="font-headline-md text-headline-md">Skyrain Studio</h3>
+                  <p class="text-primary font-label-md">Frontend Engineer</p>
+                </div>
+                <span class="text-on-surface-variant font-mono-code mt-2 md:mt-0">2022 — Present</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Developed and built interactive, responsive, and user-centric web applications by leveraging reusable component architecture. Successfully improved development efficiency, maintained design consistency, and delivered modern, visually appealing user interfaces. . </p>
+            </div>
+          </div>
+          <div class="relative pl-12 timeline-line opacity-60">
+            <div class="absolute left-[-9px] top-0 w-5 h-5 rounded-full bg-white/20 z-10"></div>
+            <div class="glass p-8 rounded-3xl">
+              <div class="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 class="font-headline-md text-headline-md">Freelance Developer</h3>
+                  <p class="text-on-surface-variant font-label-md">Web Specialist</p>
+                </div>
+                <span class="text-on-surface-variant font-mono-code mt-2 md:mt-0">2020 — 2022</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"> Collaborated with startups globally to deliver MVP products, focusing on React and integrated API services. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="py-section-gap px-gutter max-w-container-max mx-auto mb-20" id="contact">
+        <div class="glass p-stack-lg md:p-20 rounded-[3rem] text-center relative overflow-hidden">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          <h2 class="font-display-xl-mobile text-display-xl mb-6">Let’s build something <span class="text-primary text-glow italic">amazing</span> together. </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12"> Open for new opportunities, collaborations, or just a friendly tech talk. Drop me a message and let's start the conversation. </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
+            <a class="glass glass-hover p-6 rounded-2xl flex flex-col items-center gap-4 group" href="mailto:zainmuhamad17@gmail.com">
+              <span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">mail</span>
+              <span class="font-label-md uppercase tracking-wider">Email Me</span>
+            </a>
+            <!-- <a class="glass glass-hover p-6 rounded-2xl flex flex-col items-center gap-4 group" href="#"><span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">chat</span><span class="font-label-md uppercase tracking-wider">WhatsApp</span></a> -->
+            <a class="glass glass-hover p-6 rounded-2xl flex flex-col items-center gap-4 group" href="#">
+              <span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">account_circle</span>
+              <span class="font-label-md uppercase tracking-wider">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="relative z-10 w-full py-stack-lg border-t border-white/5 bg-surface-container-lowest/80 backdrop-blur-md">
+      <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-stack-md">
+        <div class="font-display-xl-mobile text-headline-md text-primary font-bold">My-Porto.id</div>
+        <div class="font-mono-code text-mono-code text-on-surface-variant">© 2024 Architect of the Void. Built with precision.</div>
+        <div class="flex gap-6">
+          <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="https://github.com/promild-pro?tab=repositories">GitHub</a>
+          <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="https://www.linkedin.com/in/m-zainul-qirom-a5b8841a0/">LinkedIn</a>
+          <!-- <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Twitter</a> -->
+          <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="zainmuhamad17@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Smooth Scrolling for all links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      // Header scroll effect
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled', 'backdrop-blur-xl');
+          header.classList.remove('bg-transparent', 'backdrop-blur-none', 'border-white/0');
+        } else {
+          header.classList.remove('scrolled', 'backdrop-blur-xl');
+          header.classList.add('bg-transparent', 'backdrop-blur-none', 'border-white/0');
+        }
+      });
+      // Active State with Intersection Observer
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const activeId = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${activeId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+      sections.forEach(section => observer.observe(section));
+      // Smooth 3D Tilt Effect
+      function handleTilt(e, card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 15;
+        const rotateY = (centerX - x) / 15;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      }
+
+      function resetTilt(card) {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+      }
+    </script>
+  </body>
+</html>
